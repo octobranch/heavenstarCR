@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Corporate Rentals | Heaven Star Car Rental</title>
+<meta content="Professional corporate car rental solutions for businesses in Cancun and Riviera Maya. Reliable vehicles for your business needs." name="description"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet">
+</link></head>
+<body>
+<div id="lang-toggle" style="position:fixed;right:10px;top:10px;z-index:9999;">
+<a aria-label="English version" href="corporate-rentals.html">EN</a> |
+      <a aria-label="Versión en Español" href="corporate-rentals.es.html">ES</a>
+</div>
+
+<!-- Header & Navigation -->
+<header>
+<div class="header-container">
+<div class="logo">
+<img alt="Heaven Star Car Rental Logo" src="https://i.ibb.co/B5yCyTcv/heavenstar-logo-white.png"/>
+<span>HEAVEN STAR</span> <span>Car Rental</span>
+</div>
+<nav>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="index.html#cars">Fleet</a></li>
+<li><a href="index.html#services">Services</a></li>
+<li><a href="index.html#about">About Us</a></li>
+<li><a href="index.html#testimonials">Testimonials</a></li>
+</ul>
+<div class="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</nav>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero">
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<h1>Corporate <span>Rentals</span></h1>
+<p>Professional vehicle solutions for businesses in Cancun and Riviera Maya</p>
+<a class="cta-button" href="#contact">Request Corporate Rates <i class="fas fa-arrow-right"></i></a>
+</div>
+
+<!-- Book Now Bar -->
+<div class="book-now-container">
+  <div class="book-now-bar">
+    <div class="input-group">
+      <label><i class="fas fa-map-marker-alt"></i> Pick-up Location</label>
+      <input type="text" id="pickup-location-corporate" name="pickup-location" placeholder="Enter pick-up location" />
+    </div>
+    <div class="input-group">
+      <label><i class="fas fa-map-marker-alt"></i> Return Location</label>
+      <input type="text" id="return-location-corporate" name="return-location" placeholder="Enter return location" />
+    </div>
+    <div class="input-group">
+      <label><i class="fas fa-calendar-alt"></i> Start Date</label>
+      <input type="datetime-local" id="start-date-corporate" name="start-date" />
+    </div>
+    <div class="input-group">
+      <label><i class="fas fa-calendar-alt"></i> End Date</label>
+      <input type="datetime-local" id="end-date-corporate" name="end-date" />
+    </div>
+    <button class="search-btn" onclick="showBookingFormCorporate()">Find Corporate Vehicles</button>
+  </div>
+</div>
+</section>
+<!-- Service Details -->
+<section class="service-details">
+<div class="container">
+<div class="service-content">
+<div class="service-text">
+<h2>Business Vehicle Solutions</h2>
+<p>Streamline your business transportation with our corporate rental program. We offer flexible solutions tailored to meet the specific needs of businesses, from small companies to large enterprises operating in Cancun and the Riviera Maya region.</p>
+<div class="features-grid">
+<div class="feature-item">
+<i class="fas fa-building"></i>
+<h3>Dedicated Account Management</h3>
+<p>Personalized service with a dedicated account manager for your business.</p>
+</div>
+<div class="feature-item">
+<i class="fas fa-file-invoice-dollar"></i>
+<h3>Simplified Billing</h3>
+<p>Consolidated monthly billing with detailed usage reports.</p>
+</div>
+<div class="feature-item">
+<i class="fas fa-car"></i>
+<h3>Diverse Fleet</h3>
+<p>Choose from economy cars to luxury vehicles and spacious SUVs.</p>
+</div>
+<div class="feature-item">
+<i class="fas fa-clock"></i>
+<h3>Priority Service</h3>
+<p>Expedited rental process and priority vehicle availability.</p>
+</div>
+</div>
+<h3>Corporate Program Benefits</h3>
+<ul class="service-list">
+<li><i class="fas fa-check-circle"></i> Special corporate rates and discounts</li>
+<li><i class="fas fa-check-circle"></i> Customized rental agreements</li>
+<li><i class="fas fa-check-circle"></i> Additional driver options at no extra cost</li>
+<li><i class="fas fa-check-circle"></i> 24/7 roadside assistance</li>
+<li><i class="fas fa-check-circle"></i> Flexible rental periods (daily, weekly, monthly)</li>
+<li><i class="fas fa-check-circle"></i> Online booking and management portal</li>
+</ul>
+<div class="pricing-info">
+<h3>Corporate Pricing</h3>
+<p>We offer competitive corporate rates based on your business needs and rental volume. Contact us for a customized quote.</p>
+<p>All corporate rentals include comprehensive insurance, maintenance, and 24/7 support.</p>
+</div>
+<div class="contact-form" id="contact">
+<h3>Request Corporate Rates</h3>
+<form name="corporate-rentals-inquiry" method="POST" netlify>
+  <input type="hidden" name="form-name" value="corporate-rentals-inquiry" />
+  <div class="form-row">
+    <div class="input-group">
+      <label for="company-name">Company Name</label>
+      <input type="text" id="company-name" name="company-name" placeholder="Enter your company name" required />
+    </div>
+    <div class="input-group">
+      <label for="contact-person">Contact Person</label>
+      <input type="text" id="contact-person" name="contact-person" placeholder="Full name" required />
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="input-group">
+      <label for="corporate-email">Email Address</label>
+      <input type="email" id="corporate-email" name="email" placeholder="Your business email" required />
+    </div>
+    <div class="input-group">
+      <label for="corporate-phone">Phone Number</label>
+      <input type="tel" id="corporate-phone" name="phone" placeholder="Business phone number" required />
+    </div>
+  </div>
+  <div class="input-group">
+    <label for="rental-needs">Estimated Monthly Rental Needs</label>
+    <select id="rental-needs" name="rental-needs" required>
+      <option value="">Select an option</option>
+      <option value="1-5">1-5 vehicles</option>
+      <option value="6-10">6-10 vehicles</option>
+      <option value="11-20">11-20 vehicles</option>
+      <option value="20+">20+ vehicles</option>
+    </select>
+  </div>
+  <div class="input-group">
+    <label for="corporate-info">Additional Information</label>
+    <textarea id="corporate-info" name="additional-info" placeholder="Tell us about your specific needs" rows="4"></textarea>
+  </div>
+  <button class="cta-button" type="submit">Submit Request</button>
+</form>
+</div>
+</div>
+<div class="service-image">
+<img alt="Corporate Car Rental" src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
+<div class="image-overlay">
+<h3>Business Excellence</h3>
+<p>Reliable transportation solutions</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="cta-section">
+<div class="container">
+<div class="cta-content">
+<h2>Optimize Your Business Transportation</h2>
+<p>Join our corporate program and experience the benefits of hassle-free vehicle rentals for your business.</p>
+<a class="cta-button" href="#" onclick="showBookingFormCorporate(); return false;">Request Information <i class="fas fa-arrow-right"></i></a>
+</div>
+</div>
+</section>
+
+<!-- Booking Form Modal -->
+<div id="booking-form-modal" class="modal">
+  <div class="modal-content booking-form">
+    <span class="close-booking">&times;</span>
+    <h2>Complete Your Booking</h2>
+    
+    <form name="booking" method="POST" netlify>
+      <input type="hidden" name="form-name" value="booking" />
+      
+      <div class="booking-details">
+        <div class="selected-car">
+          <h3>Selected Vehicle</h3>
+          <div class="car-summary">
+            <img id="selected-car-img" src="" alt="Selected Car" />
+            <div class="car-info">
+              <h4 id="selected-car-name"></h4>
+              <p id="selected-car-price"></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="booking-summary">
+          <h3>Booking Summary</h3>
+          <div class="summary-item">
+            <span class="summary-label">Pick-up</span>
+            <span id="summary-pickup" class="summary-value"></span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-label">Return</span>
+            <span id="summary-return" class="summary-value"></span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-label">Duration</span>
+            <span id="summary-days" class="summary-value"></span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-label">Daily Rate</span>
+            <span id="summary-rate" class="summary-value"></span>
+          </div>
+          <div class="summary-item total">
+            <span class="summary-label">Total Amount</span>
+            <span id="summary-total" class="summary-value"></span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="customer-info">
+        <h3>Personal Information</h3>
+        <div class="form-row">
+          <div class="input-group">
+            <label for="customer-name">Full Name</label>
+            <input type="text" id="customer-name" name="customer-name" placeholder="Enter your full name" required />
+          </div>
+          <div class="input-group">
+            <label for="customer-email">Email</label>
+            <input type="email" id="customer-email" name="customer-email" placeholder="Enter your email" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-group">
+            <label for="customer-phone">Phone</label>
+            <input type="tel" id="customer-phone" name="customer-phone" placeholder="Enter your phone number" required />
+          </div>
+          <div class="input-group">
+            <label for="customer-license">Driver's License</label>
+            <input type="text" id="customer-license" name="customer-license" placeholder="Enter your license number" required />
+          </div>
+        </div>
+      </div>
+      
+      <div class="customer-additional-info">
+        <h3>Additional Information</h3>
+        <div class="form-row">
+          <div class="input-group">
+            <label for="customer-flight">Flight Number</label>
+            <input type="text" id="customer-flight" name="customer-flight" placeholder="Enter your flight number" />
+          </div>
+          <div class="input-group">
+            <label for="customer-hotel">Hotel / Accomodation</label>
+            <input type="text" id="customer-hotel" name="customer-hotel" placeholder="Enter your accomodation" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-group">
+            <label for="customer-country">Country</label>
+            <input type="text" id="customer-country" name="customer-country" placeholder="Enter your country" />
+          </div>
+        </div>
+      </div>
+      
+      <p>CDW 10% deductible | Legal Asistence LAS | Medical insurance PAI | Unlimited miliage | Local & federal taxes | Liability ALI</p>
+      
+      <button type="submit" class="confirm-booking-btn">Confirm Booking</button>
+    </form>
+  </div>
+</div>
+
+<!-- Booking Confirmation Modal -->
+<div id="confirmation-modal" class="modal">
+  <div class="modal-content confirmation">
+    <span class="close-confirmation">&times;</span>
+    <div class="confirmation-content">
+      <i class="fas fa-check-circle confirmation-icon"></i>
+      <h2>Booking Confirmed!</h2>
+      <p>Thank you for your reservation. A confirmation email has been sent to your inbox.</p>
+      <div class="reference-number">
+        <span>Booking Reference:</span>
+        <strong id="booking-reference"></strong>
+      </div>
+      <p class="confirmation-note">Our team will contact you within 24 hours to confirm your booking details.</p>
+      <button class="ok-btn" onclick="closeConfirmation()">Done</button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-section">
+<div class="logo">
+<img alt="Heaven Star Car Rental Logo" src="https://i.ibb.co/B5yCyTcv/heavenstar-logo-white.png"/>
+<span>Heaven Star Car Rental</span>
+</div>
+<p>Your best option for reliable and affordable car rentals. Experience excellence in mobility.</p>
+<div class="social-icons">
+<a href="https://www.facebook.com/profile.php?id=100070243123159" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/heaven_rentalcar/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://x.com/CarrentalHeaven" target="_blank"><i class="fab fa-x-twitter"></i></a>
+</div>
+</div>
+<div class="footer-section">
+<h3>Quick Links</h3>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="index.html#cars">Our Fleet</a></li>
+<li><a href="index.html#services">Services</a></li>
+<li><a href="index.html#about">About Us</a></li>
+<li><a href="index.html#testimonials">Testimonials</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>Services</h3>
+<ul>
+<li><a href="luxury-car-rental.html">Luxury Car Rental</a></li>
+<li><a href="corporate-rentals.html">Corporate Rentals</a></li>
+<li><a href="event-transportation.html">Event Transportation</a></li>
+<li><a href="airport-transfers.html">Airport Transfers</a></li>
+<li><a href="long-term-leasing.html">Long Term Leasing</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>Contact Us</h3>
+<ul>
+<li><i class="fas fa-phone"></i> +52 998 464 9833</li>
+<li><i class="fas fa-phone"></i> +52 998 149 9841</li>
+<li><i class="fas fa-envelope"></i> reservations@heavenstar.com</li>
+<li><i class="fas fa-map-marker-alt"></i> Carretera Cancún - Chetumal, mza. 03, Lote 03, local #103 C. P 77567 Cancún, Q. Roo, México.</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2025 Heaven Star Car Rental. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+<script src="script.js"></script>
+<script>
+// Función específica para la página de corporate rentals
+function showBookingFormCorporate() {
+  // Check if dates are selected
+  const startDate = document.getElementById('start-date-corporate').value;
+  const endDate = document.getElementById('end-date-corporate').value;
+  const pickupLocation = document.getElementById('pickup-location-corporate').value;
+  const returnLocation = document.getElementById('return-location-corporate').value;
+  
+  // Validate inputs
+  if (!startDate || !endDate) {
+    showNotification('Please select both start and end dates', 'error');
+    return;
+  }
+  
+  if (!pickupLocation || !returnLocation) {
+    showNotification('Please enter both pickup and return locations', 'error');
+    return;
+  }
+  
+  // Set default corporate vehicle details
+  currentVehicle = {
+    name: 'Corporate Vehicle',
+    price: '75.00',
+    img: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    specs: {}
+  };
+  
+  // Open the booking form
+  openBookingForm();
+}
+</script>
+</body>
+</html>
