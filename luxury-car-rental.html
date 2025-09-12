@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luxury Car Rental | Heaven Star Car Rental</title>
+<meta content="Experience premium luxury car rentals in Cancun and Riviera Maya. Choose from our exclusive collection of high-end vehicles." name="description"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet">
+</link></head>
+<body>
+<div id="lang-toggle" style="position:fixed;right:10px;top:10px;z-index:9999;">
+<a aria-label="English version" href="luxury-car-rental.html">EN</a> |
+      <a aria-label="Versión en Español" href="luxury-car-rental.es.html">ES</a>
+</div>
+
+<!-- Header & Navigation -->
+<header>
+<div class="header-container">
+<div class="logo">
+<img alt="Heaven Star Car Rental Logo" src="https://i.ibb.co/B5yCyTcv/heavenstar-logo-white.png"/>
+<span>HEAVEN STAR</span> <span>Car Rental</span>
+</div>
+<nav>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="index.html#cars">Fleet</a></li>
+<li><a href="index.html#services">Services</a></li>
+<li><a href="index.html#about">About Us</a></li>
+<li><a href="index.html#testimonials">Testimonials</a></li>
+</ul>
+<div class="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</nav>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero">
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<h1>Luxury Car <span>Rental</span></h1>
+<p>Experience the pinnacle of automotive excellence with our premium luxury vehicle collection</p>
+<a class="cta-button" href="index.html#cars">Explore Luxury Fleet <i class="fas fa-arrow-right"></i></a>
+</div>
+
+<!-- Book Now Bar -->
+<div class="book-now-container">
+  <div class="book-now-bar">
+    <div class="input-group">
+      <label><i class="fas fa-map-marker-alt"></i> Pick-up Location</label>
+      <input type="text" id="pickup-location-luxury" name="pickup-location" placeholder="Enter pick-up location" />
+    </div>
+    <div class="input-group">
+      <label><i class="fas fa-map-marker-alt"></i> Return Location</label>
+      <input type="text" id="return-location-luxury" name="return-location" placeholder="Enter return location" />
+    </div>
+    <div class="input-group">
+      <label><i class="fas fa-calendar-alt"></i> Start Date</label>
+      <input type="datetime-local" id="start-date-luxury" name="start-date" />
+    </div>
+    <div class="input-group">
+      <label><i class="fas fa-calendar-alt"></i> End Date</label>
+      <input type="datetime-local" id="end-date-luxury" name="end-date" />
+    </div>
+    <button class="search-btn" onclick="showBookingFormLuxury()">Find Your Luxury Car</button>
+  </div>
+</div>
+</section>
+<!-- Service Details -->
+<section class="service-details">
+<div class="container">
+<div class="service-content">
+<div class="service-text">
+<h2>Premium Luxury Experience</h2>
+<p>Indulge in the ultimate driving experience with our carefully curated selection of luxury vehicles. Each car in our premium collection combines superior performance with exceptional comfort and style, ensuring your journey is as remarkable as your destination.</p>
+<div class="features-grid">
+<div class="feature-item">
+<i class="fas fa-crown"></i>
+<h3>Premium Selection</h3>
+<p>Choose from top-tier luxury brands including Mercedes-Benz, BMW, Audi, and more.</p>
+</div>
+<div class="feature-item">
+<i class="fas fa-user-tie"></i>
+<h3>Executive Service</h3>
+<p>Personalized concierge service with priority booking and dedicated support.</p>
+</div>
+<div class="feature-item">
+<i class="fas fa-shield-alt"></i>
+<h3>Premium Insurance</h3>
+<p>Comprehensive coverage with reduced deductibles for complete peace of mind.</p>
+</div>
+<div class="feature-item">
+<i class="fas fa-gem"></i>
+<h3>Luxury Amenities</h3>
+<p>Enjoy premium features like leather interiors, advanced infotainment systems, and more.</p>
+</div>
+</div>
+<h3>Luxury Fleet Options</h3>
+<ul class="service-list">
+<li><i class="fas fa-car"></i> Luxury Sedans (Mercedes E-Class, BMW 5 Series)</li>
+<li><i class="fas fa-car"></i> Executive SUVs (Range Rover, Audi Q7)</li>
+<li><i class="fas fa-car"></i> Sports Cars (Porsche 911, BMW Z4)</li>
+<li><i class="fas fa-car"></i> Convertibles (Mercedes SLK, BMW 4 Series Convertible)</li>
+</ul>
+<div class="pricing-info">
+<h3>Pricing</h3>
+<p>Luxury vehicles start at <strong>$150 per day</strong> including premium insurance coverage and 24/7 concierge support.</p>
+<p>Special weekly and monthly rates available for extended rentals.</p>
+</div>
+<a class="cta-button" href="index.html#cars">View Luxury Fleet</a>
+</div>
+<div class="service-image">
+<img alt="Luxury Car Rental" src="https://images.unsplash.com/photo-1603712610494-93e15442ad7a?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
+<div class="image-overlay">
+<h3>Experience Excellence</h3>
+<p>Drive in style and comfort</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="cta-section">
+<div class="container">
+<div class="cta-content">
+<h2>Ready to Experience Luxury?</h2>
+<p>Reserve your premium vehicle today and elevate your travel experience in Cancun and Riviera Maya.</p>
+<a class="cta-button" href="#" onclick="showBookingFormLuxury(); return false;">Reserve Now <i class="fas fa-arrow-right"></i></a>
+</div>
+</div>
+</section>
+
+<!-- Booking Form Modal -->
+<div id="booking-form-modal" class="modal">
+  <div class="modal-content booking-form">
+    <span class="close-booking">&times;</span>
+    <h2>Complete Your Booking</h2>
+    
+    <form name="booking" method="POST" netlify>
+      <input type="hidden" name="form-name" value="booking" />
+      
+      <div class="booking-details">
+        <div class="selected-car">
+          <h3>Selected Vehicle</h3>
+          <div class="car-summary">
+            <img id="selected-car-img" src="" alt="Selected Car" />
+            <div class="car-info">
+              <h4 id="selected-car-name"></h4>
+              <p id="selected-car-price"></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="booking-summary">
+          <h3>Booking Summary</h3>
+          <div class="summary-item">
+            <span class="summary-label">Pick-up</span>
+            <span id="summary-pickup" class="summary-value"></span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-label">Return</span>
+            <span id="summary-return" class="summary-value"></span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-label">Duration</span>
+            <span id="summary-days" class="summary-value"></span>
+          </div>
+          <div class="summary-item">
+            <span class="summary-label">Daily Rate</span>
+            <span id="summary-rate" class="summary-value"></span>
+          </div>
+          <div class="summary-item total">
+            <span class="summary-label">Total Amount</span>
+            <span id="summary-total" class="summary-value"></span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="customer-info">
+        <h3>Personal Information</h3>
+        <div class="form-row">
+          <div class="input-group">
+            <label for="customer-name">Full Name</label>
+            <input type="text" id="customer-name" name="customer-name" placeholder="Enter your full name" required />
+          </div>
+          <div class="input-group">
+            <label for="customer-email">Email</label>
+            <input type="email" id="customer-email" name="customer-email" placeholder="Enter your email" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-group">
+            <label for="customer-phone">Phone</label>
+            <input type="tel" id="customer-phone" name="customer-phone" placeholder="Enter your phone number" required />
+          </div>
+          <div class="input-group">
+            <label for="customer-license">Driver's License</label>
+            <input type="text" id="customer-license" name="customer-license" placeholder="Enter your license number" required />
+          </div>
+        </div>
+      </div>
+      
+      <div class="customer-additional-info">
+        <h3>Additional Information</h3>
+        <div class="form-row">
+          <div class="input-group">
+            <label for="customer-flight">Flight Number</label>
+            <input type="text" id="customer-flight" name="customer-flight" placeholder="Enter your flight number" />
+          </div>
+          <div class="input-group">
+            <label for="customer-hotel">Hotel / Accomodation</label>
+            <input type="text" id="customer-hotel" name="customer-hotel" placeholder="Enter your accomodation" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-group">
+            <label for="customer-country">Country</label>
+            <input type="text" id="customer-country" name="customer-country" placeholder="Enter your country" />
+          </div>
+        </div>
+      </div>
+      
+      <p>CDW 10% deductible | Legal Asistence LAS | Medical insurance PAI | Unlimited miliage | Local & federal taxes | Liability ALI</p>
+      
+      <button type="submit" class="confirm-booking-btn">Confirm Booking</button>
+    </form>
+  </div>
+</div>
+
+<!-- Booking Confirmation Modal -->
+<div id="confirmation-modal" class="modal">
+  <div class="modal-content confirmation">
+    <span class="close-confirmation">&times;</span>
+    <div class="confirmation-content">
+      <i class="fas fa-check-circle confirmation-icon"></i>
+      <h2>Booking Confirmed!</h2>
+      <p>Thank you for your reservation. A confirmation email has been sent to your inbox.</p>
+      <div class="reference-number">
+        <span>Booking Reference:</span>
+        <strong id="booking-reference"></strong>
+      </div>
+      <p class="confirmation-note">Our team will contact you within 24 hours to confirm your booking details.</p>
+      <button class="ok-btn" onclick="closeConfirmation()">Done</button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-section">
+<div class="logo">
+<img alt="Heaven Star Car Rental Logo" src="https://i.ibb.co/B5yCyTcv/heavenstar-logo-white.png"/>
+<span>Heaven Star Car Rental</span>
+</div>
+<p>Your best option for reliable and affordable car rentals. Experience excellence in mobility.</p>
+<div class="social-icons">
+<a href="https://www.facebook.com/profile.php?id=100070243123159" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/heaven_rentalcar/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://x.com/CarrentalHeaven" target="_blank"><i class="fab fa-x-twitter"></i></a>
+</div>
+</div>
+<div class="footer-section">
+<h3>Quick Links</h3>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="index.html#cars">Our Fleet</a></li>
+<li><a href="index.html#services">Services</a></li>
+<li><a href="index.html#about">About Us</a></li>
+<li><a href="index.html#testimonials">Testimonials</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>Services</h3>
+<ul>
+<li><a href="luxury-car-rental.html">Luxury Car Rental</a></li>
+<li><a href="corporate-rentals.html">Corporate Rentals</a></li>
+<li><a href="event-transportation.html">Event Transportation</a></li>
+<li><a href="airport-transfers.html">Airport Transfers</a></li>
+<li><a href="long-term-leasing.html">Long Term Leasing</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>Contact Us</h3>
+<ul>
+<li><i class="fas fa-phone"></i> +52 998 464 9833</li>
+<li><i class="fas fa-phone"></i> +52 998 149 9841</li>
+<li><i class="fas fa-envelope"></i> reservations@heavenstar.com</li>
+<li><i class="fas fa-map-marker-alt"></i> Carretera Cancún - Chetumal, mza. 03, Lote 03, local #103 C. P 77567 Cancún, Q. Roo, México.</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2025 Heaven Star Car Rental. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+<script src="script.js"></script>
+<script>
+// Función específica para la página de luxury car rental
+function showBookingFormLuxury() {
+  // Check if dates are selected
+  const startDate = document.getElementById('start-date-luxury').value;
+  const endDate = document.getElementById('end-date-luxury').value;
+  const pickupLocation = document.getElementById('pickup-location-luxury').value;
+  const returnLocation = document.getElementById('return-location-luxury').value;
+  
+  // Validate inputs
+  if (!startDate || !endDate) {
+    showNotification('Please select both start and end dates', 'error');
+    return;
+  }
+  
+  if (!pickupLocation || !returnLocation) {
+    showNotification('Please enter both pickup and return locations', 'error');
+    return;
+  }
+  
+  // Set default luxury vehicle details
+  currentVehicle = {
+    name: 'Luxury Vehicle',
+    price: '150.00',
+    img: 'https://images.unsplash.com/photo-1603712610494-93e15442ad7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    specs: {}
+  };
+  
+  // Open the booking form
+  openBookingForm();
+}
+</script>
+</body>
+</html>
