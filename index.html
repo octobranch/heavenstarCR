@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heaven Star Car Rental | Luxury Vehicle Rentals</title>
+  <meta name="description" content="Heaven Star car rental service offering luxury vehicles for any occasion. Experience excellence in mobility.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="index.html" hreflang="en" rel="alternate"/><link href="index.es.html" hreflang="es" rel="alternate"/>
+</head>
+<body>
+<div id="lang-toggle">
+  <a aria-label="English version" href="index.html">EN</a>
+  <a aria-label="Versión en Español" href="index.es.html">ES</a>
+</div>
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="https://i.ibb.co/B5yCyTcv/heavenstar-logo-white.png" alt="Heaven Star Car Rental Logo" />
+        <span>HEAVEN STAR</span> <span>Car Rental</span>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#cars">Fleet</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Experience Luxury <span>On The Road</span></h1>
+      <p>Car Rental in Cancun & Riviera Maya Premium vehicles, exceptional service, unforgettable journeys</p>
+      <a href="#cars" class="cta-button">Explore Our Fleet <i class="fas fa-arrow-right"></i></a>
+    </div>
+    
+    <!-- Book Now Bar -->
+    <div class="book-now-container">
+      <div class="book-now-bar">
+        <div class="input-group">
+          <label><i class="fas fa-map-marker-alt"></i> Pick-up Location</label>
+          <input type="text" id="pickup-location" name="pickup-location" placeholder="Enter pick-up location" />
+        </div>
+        <div class="input-group">
+          <label><i class="fas fa-map-marker-alt"></i> Return Location</label>
+          <input type="text" id="return-location" name="return-location" placeholder="Enter return location" />
+        </div>
+        <div class="input-group">
+          <label><i class="fas fa-calendar-alt"></i> Start Date</label>
+          <input type="datetime-local" id="start-date" name="start-date" />
+        </div>
+        <div class="input-group">
+          <label><i class="fas fa-calendar-alt"></i> End Date</label>
+          <input type="datetime-local" id="end-date" name="end-date" />
+        </div>
+        <button class="search-btn" onclick="showBookingForm()">Find Your Car</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Why Choose Us</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Fully Insured</h3>
+          <p>CDW 10% deductible | Legal Asistence LAS | Medical insurance PAI | Unlimited miliage | Local & federal taxes | Liability ALI</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3>24/7 Support</h3>
+          <p>Round-the-clock assistance for any emergencies or questions you might have.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-sync-alt"></i>
+          </div>
+          <h3>Flexible Rentals</h3>
+          <p>Daily, weekly, or monthly rentals with easy extension options.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-tachometer-alt"></i>
+          </div>
+          <h3>Premium Fleet</h3>
+          <p>Regularly maintained luxury vehicles for the ultimate driving experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+  <!-- Featured Vehicles -->
+  <section id="cars" class="featured-vehicles">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Premium Fleet</h2>
+        <p>Select from our collection of exceptional vehicles</p>
+      </div>
+      
+      <div class="filters">
+        <button class="filter-btn active" data-category="all">All Vehicles</button>
+        <button class="filter-btn" data-category="economic">Economic </button>
+        <button class="filter-btn" data-category="compact">Compact </button>
+        <button class="filter-btn" data-category="standard">Standard </button>
+        <button class="filter-btn" data-category="fullsize">Full Size</button>
+        <button class="filter-btn" data-category="suv">SUV</button>
+        <button class="filter-btn" data-category="van">Van</button>    
+      </div>
+      
+      <div class="vehicle-container">
+
+        <div class="vehicle-card" data-price="41.00" data-category="economic"
+             data-specs='{"speed":"189 km/h","acceleration":"0-100 km/h in 11.3 s","engine":"1.6 L I4 (115 HP)","transmission":"5-speed Manual","fuelEconomy":"6.6 L/100 km (avg)","features":"Front-wheel drive, Air-conditioning, Power steering, Alloy wheels (depending on trim)"}'>
+          <div class="vehicle-image">
+            <img src="https://i.ibb.co/zV3V9KM0/economic.png" alt="Economic" />
+            <div class="vehicle-overlay">
+              <button class="quick-view-btn">Quick View</button>
+            </div>
+          </div>
+          <div class="vehicle-info">
+            <h3 class="vehicle-title">ECONOMIC</h3>
+            <p>Example of this range: Chevrolet Aveo manual or Similar</p>
+            <div class="vehicle-meta">
+              <span><i class="fas fa-suitcase"></i> 2</span>
+              <span><i class="fas fa-cogs"></i> Manual</span>
+              <span><i class="fas fa-user"></i> 4 Seats</span>
+            </div>
+            <div class="price">$41.00<span>/day</span></div>
+            <button class="vehicle-button">View Details</button>
+          </div>
+        </div>
+
+        <div class="vehicle-card" data-price="47.00" data-category="compact"
+             data-specs='{"speed":"189 km/h","acceleration":"0-100 km/h in 11.3 s","engine":"1.6 L I4 (115 HP)","transmission":"5-speed Manual","fuelEconomy":"6.6 L/100 km (avg)","features":"Front-wheel drive, Air-conditioning, Power steering, Alloy wheels (depending on trim)"}'>
+          <div class="vehicle-image">
+            <img src="https://i.ibb.co/LzfxHmvm/compact.png" alt="Compact" />
+            <div class="vehicle-overlay">
+              <button class="quick-view-btn">Quick View</button>
+            </div>
+          </div>
+          <div class="vehicle-info">
+            <h3 class="vehicle-title">COMPACT</h3>
+            <p>Example of this range: Chevrolet Aveo or Similar</p>
+            <div class="vehicle-meta">
+              <span><i class="fas fa-suitcase"></i> 4</span>
+              <span><i class="fas fa-cogs"></i> Automatic</span>
+              <span><i class="fas fa-user"></i> 5 Seats</span>
+            </div>
+            <div class="price">$47.00<span>/day</span></div>
+            <button class="vehicle-button">View Details</button>
+          </div>
+        </div>
+        
+        <div class="vehicle-card" data-price="53.00" data-category="standard"
+             data-specs='{"speed":"~180 km/h","acceleration":"0-100 km/h in ≈10.7 s","engine":"1.6 L I4 (122 hp, 114 lb-ft)","transmission":"5-speed Manual (S trim) or CVT","fuelEconomy":"32 city / 40 highway mpg (≈7.4 L/100 km combined)","features":"Apple CarPlay, Android Auto (SV/SR), Heated front seats (SR option), Automatic Emergency Braking, Lane-departure Warning"}'>
+          <div class="vehicle-image">
+            <img src="https://i.ibb.co/KxYdhs1P/standard-size.png" alt="Standad size" />
+            <div class="vehicle-overlay">
+              <button class="quick-view-btn">Quick View</button>
+            </div>
+          </div>
+          <div class="vehicle-info">
+            <h3 class="vehicle-title">STANDARD SIZE</h3>
+            <p>Example of this range: Nissan Versa or Similar</p>
+            <div class="vehicle-meta">
+              <span><i class="fas fa-suitcase"></i> 4</span>
+              <span><i class="fas fa-cogs"></i> Automatic</span>
+              <span><i class="fas fa-user"></i> 5 Seats</span>
+            </div>
+            <div class="price">$53.00<span>/day</span></div>
+            <button class="vehicle-button">View Details</button>
+          </div>
+        </div>
+
+        <div class="vehicle-card" data-price="57.00" data-category="fullsize"
+             data-specs='{"speed":"~190 km/h","acceleration":"0-100 km/h in ≈9.3 s","engine":"1.5 L TSI Evo I-4 Turbo (150 bhp, 250 Nm)","transmission":"7-speed DSG","fuelEconomy":"~19.6 kmpl (~5.1 L/100 km)","features":"Apple CarPlay & Android Auto, Ventilated front seats, Sunroof, 5-star Global NCAP safety"}'>
+          <div class="vehicle-image">
+            <img src="https://i.ibb.co/2XDSNjj/Fullsize.png" alt="Fullsize" />
+            <div class="vehicle-overlay">
+              <button class="quick-view-btn">Quick View</button>
+            </div>
+          </div>
+          <div class="vehicle-info">
+            <h3 class="vehicle-title">FULL SIZE</h3>
+            <p>Example of this range: VW Virtus or Similar</p>
+            <div class="vehicle-meta">
+              <span><i class="fas fa-suitcase"></i> 5</span>
+              <span><i class="fas fa-cogs"></i> Automatic</span>
+              <span><i class="fas fa-user"></i> 5 Seats</span>
+            </div>
+            <div class="price">$57.00<span>/day</span></div>
+            <button class="vehicle-button">View Details</button>
+          </div>
+        </div>
+
+        <div class="vehicle-card" data-price="68.00" data-category="standard"
+             data-specs='{"speed":"~180 km/h","acceleration":"0-100 km/h in ≈11.7 s","engine":"2.0 L I4 (141 hp, 140 lb-ft)","transmission":"Xtronic CVT","fuelEconomy":"~7.6 L/100 km combined (31 mpg)","features":"Apple CarPlay & Android Auto (wireless available), Touchscreen infotainment, Backup camera, ProPILOT Assist (SR), Heated front seats (SR), Safety Shield 360"}'>
+          <div class="vehicle-image">
+            <img src="https://i.ibb.co/jPB8q4j5/standard-suv.png" alt="Standard SUV" />
+            <div class="vehicle-overlay">
+              <button class="quick-view-btn">Quick View</button>
+            </div>
+          </div>
+          <div class="vehicle-info">
+            <h3 class="vehicle-title">STANDARD SUV</h3>
+            <p>Example of this range: Nissan Kicks or Similar</p>
+            <div class="vehicle-meta">
+              <span><i class="fas fa-suitcase"></i> 4</span>
+              <span><i class="fas fa-cogs"></i> Automatic</span>
+              <span><i class="fas fa-user"></i> 5 Seats</span>
+            </div>
+            <div class="price">$68.00<span>/day</span></div>
+            <button class="vehicle-button">View Details</button>
+          </div>
+        </div>
+
+        <div class="vehicle-card" data-price="84.00" data-category="suv"
+             data-specs='{"speed":"approx. 180 km/h","acceleration":"0-100 km/h in ≈8.8 s","engine":"1.5 L Inline-4 Turbo (144 hp, 249 Nm)","transmission":"CVT automatic","fuelEconomy":"~6.9 L/100 km combined","features":"Smartphone integration (Apple CarPlay & Android Auto), Touchscreen infotainment, Backup camera, Keyless entry (PEPS), Stability control, 6-airbag safety"}'>
+          <div class="vehicle-image">
+            <img src="https://i.ibb.co/GQW4cTTL/suv.png" alt="Suv" />
+            <div class="vehicle-overlay">
+              <button class="quick-view-btn">Quick View</button>
+            </div>
+          </div>
+          <div class="vehicle-info">
+            <h3 class="vehicle-title">SUV</h3>
+            <p>Example of this range: Chevrolet Captiva or Similar</p>
+            <div class="vehicle-meta">
+              <span><i class="fas fa-suitcase"></i> 4</span>
+              <span><i class="fas fa-cogs"></i> Automatic</span>
+              <span><i class="fas fa-user"></i> 7 Seats</span>
+            </div>
+            <div class="price">$84.00<span>/day</span></div>
+            <button class="vehicle-button">View Details</button>
+          </div>
+        </div>
+
+        <div class="vehicle-card" data-price="104.00" data-category="van"
+             data-specs='{"speed":"190 km/h","acceleration":"0-100 km/h in 8.5 s","engine":"3.5 L V6 (272 PS, 33.8 kg·m)","transmission":"8-speed Automatic","fuelEconomy":"~10.7 L/100 km combined (21 mpg US)","features":"8-passenger seating, Power sliding doors, Rear entertainment system (opt.), Apple CarPlay & Android Auto"}'>
+          <div class="vehicle-image">
+            <img src="https://i.ibb.co/pBdKVKL2/minivan.png" alt="Mini Van" />
+            <div class="vehicle-overlay">
+              <button class="quick-view-btn">Quick View</button>
+            </div>
+          </div>
+          <div class="vehicle-info">
+            <h3 class="vehicle-title">MINIVAN</h3>
+            <p>Example of this range: Kia Sedona or Similar</p>
+            <div class="vehicle-meta">
+              <span><i class="fas fa-suitcase"></i> 4</span>
+              <span><i class="fas fa-cogs"></i> Automatic</span>
+              <span><i class="fas fa-user"></i> 7 Seats</span>
+            </div>
+            <div class="price">$104.00<span>/day</span></div>
+            <button class="vehicle-button">View Details</button>
+          </div>
+        </div>
+
+        <div class="vehicle-card" data-price="168.00" data-category="van"
+             data-specs='{"speed":"≈170 km/h","acceleration":"0-100 km/h in ≈16 s","engine":"2.5 L I4 Diesel (129 hp, 356 Nm)","transmission":"5-speed Manual (AT optional)","fuelEconomy":"~8.3 L/100 km combined","features":"High payload (~1420 kg), Seating up to 12–15, Rear cargo space, ABS & Brake Assist"}'>
+          <div class="vehicle-image">
+            <img src="https://i.ibb.co/YBNBBZgX/maxivan.png" alt="Maxivan" />
+            <div class="vehicle-overlay">
+              <button class="quick-view-btn">Quick View</button>
+            </div>
+          </div>
+          <div class="vehicle-info">
+            <h3 class="vehicle-title">MAXIVAN</h3>
+            <p>Example of this range: Nissan Urvan or Similar</p>
+            <div class="vehicle-meta">
+              <span><i class="fas fa-suitcase"></i> 6</span>
+              <span><i class="fas fa-cogs"></i> Manual</span>
+              <span><i class="fas fa-user"></i> 15 Seats</span>
+            </div>
+            <div class="price">$168.00<span>/day</span></div>
+            <button class="vehicle-button">View Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Testimonial section -->
+  <section class="testimonials">
+   <section id="testimonials" class="container">
+    <div class="container">
+      <div class="section-header">
+    <h2>Voices of Trust – Our Clients Speak</h2>
+
+    <!-- Slider -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Testimonio 1 -->
+        <div class="swiper-slide testimonial">
+          <div class="testimonial-content">
+            <div class="rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p>"The entire experience was exceptional. The car was in perfect condition and the staff went above and beyond to ensure our trip was memorable."</p>
+            <div class="client">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" />
+              <div class="client-info">
+                <h4>Michael Rodriguez</h4>
+                <span>Business Executive</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 2 -->
+        <div class="swiper-slide testimonial">
+          <div class="testimonial-content">
+            <div class="rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p>"I've rented from Heaven Star Car Rental multiple times for both business and leisure, and they never disappoint. Their fleet is always top-notch."</p>
+            <div class="client">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" />
+              <div class="client-info">
+                <h4>Sarah Johnson</h4>
+                <span>Frequent Traveler</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 3 -->
+        <div class="swiper-slide testimonial">
+          <div class="testimonial-content">
+            <div class="rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p>"The booking process was seamless, and the pickup was quick and efficient. The luxury vehicle made our anniversary celebration even more special."</p>
+            <div class="client">
+              <img src="https://randomuser.me/api/portraits/men/62.jpg" alt="Client" />
+              <div class="client-info">
+                <h4>James Wilson</h4>
+                <span>Event Planner</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 4 -->
+        <div class="swiper-slide testimonial">
+          <div class="testimonial-content">
+            <div class="rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p>"From start to finish, the service was outstanding. The team was friendly, professional, and made the entire rental process stress-free."</p>
+            <div class="client">
+              <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client" />
+              <div class="client-info">
+                <h4>Laura Martinez</h4>
+                <span>Marketing Consultant</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 5 -->
+        <div class="swiper-slide testimonial">
+          <div class="testimonial-content">
+            <div class="rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p>"The customer support was excellent. They explained everything clearly and made sure I felt comfortable with the rental process."</p>
+            <div class="client">
+              <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Client" />
+              <div class="client-info">
+                <h4>David Thompson</h4>
+                <span>Teacher</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 6 -->
+        <div class="swiper-slide testimonial">
+          <div class="testimonial-content">
+            <div class="rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p>"The best car rental experience I’ve had in Cancun. Fast service, clean vehicles, and very fair pricing. Highly recommended!"</p>
+            <div class="client">
+              <img src="https://randomuser.me/api/portraits/women/25.jpg" alt="Client" />
+              <div class="client-info">
+                <h4>Emily Carter</h4>
+                <span>Travel Blogger</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    freeMode: true,
+    grabCursor: true,
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    speed: 6000, // velocidad del carrusel
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.2
+      },
+      768: {
+        slidesPerView: 2.5
+      },
+      1024: {
+        slidesPerView: 3.5
+      }
+    }
+  });
+</script>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vehicle Details Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-grid">
+        <div class="modal-image">
+          <img id="modal-img" src="" alt="Car" />
+        </div>
+        <div class="modal-details">
+          <h2 id="modal-title"></h2>
+          <p id="modal-desc"></p>
+          <div id="modal-price" class="modal-price"></div>
+          
+          <div class="car-specs">
+            <h3>Vehicle Specifications</h3>
+            <div class="specs-grid">
+              <div class="spec-item">
+                <i class="fas fa-tachometer-alt"></i>
+                <div class="spec-info">
+                  <span class="spec-label">Top Speed</span>
+                  <span id="modal-speed" class="spec-value"></span>
+                </div>
+              </div>
+              <div class="spec-item">
+                <i class="fas fa-stopwatch"></i>
+                <div class="spec-info">
+                  <span class="spec-label">Acceleration</span>
+                  <span id="modal-acceleration" class="spec-value"></span>
+                </div>
+              </div>
+              <div class="spec-item">
+                <i class="fas fa-cogs"></i>
+                <div class="spec-info">
+                  <span class="spec-label">Engine</span>
+                  <span id="modal-engine" class="spec-value"></span>
+                </div>
+              </div>
+              <div class="spec-item">
+                <i class="fas fa-car"></i>
+                <div class="spec-info">
+                  <span class="spec-label">Transmission</span>
+                  <span id="modal-transmission" class="spec-value"></span>
+                </div>
+              </div>
+              <div class="spec-item">
+                <i class="fas fa-gas-pump"></i>
+                <div class="spec-info">
+                  <span class="spec-label">Fuel Economy</span>
+                  <span id="modal-fuel" class="spec-value"></span>
+                </div>
+              </div>
+            </div>
+            <div class="features">
+              <h4><i class="fas fa-star"></i> Key Features</h4>
+              <p id="modal-features"></p>
+            </div>
+          </div>
+          <div class="modal-buttons">
+            <button class="book-now-btn" onclick="openBookingForm()">Book Now</button>
+            <button class="close-modal-btn" onclick="closeModal()">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Booking Form Modal -->
+  <div id="booking-form-modal" class="modal">
+    <div class="modal-content booking-form">
+      <span class="close-booking">&times;</span>
+      <h2>Complete Your Booking</h2>
+      
+      <form name="booking" method="POST" netlify>
+        <input type="hidden" name="form-name" value="booking" />
+        
+        <div class="booking-details">
+          <div class="selected-car">
+            <h3>Selected Vehicle</h3>
+            <div class="car-summary">
+              <img id="selected-car-img" src="" alt="Selected Car" />
+              <div class="car-info">
+                <h4 id="selected-car-name"></h4>
+                <p id="selected-car-price"></p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="booking-summary">
+            <h3>Booking Summary</h3>
+            <div class="summary-item">
+              <span class="summary-label">Pick-up</span>
+              <span id="summary-pickup" class="summary-value"></span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Return</span>
+              <span id="summary-return" class="summary-value"></span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Duration</span>
+              <span id="summary-days" class="summary-value"></span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Daily Rate</span>
+              <span id="summary-rate" class="summary-value"></span>
+            </div>
+            <div class="summary-item total">
+              <span class="summary-label">Total Amount</span>
+              <span id="summary-total" class="summary-value"></span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="customer-info">
+          <h3>Personal Information</h3>
+          <div class="form-row">
+            <div class="input-group">
+              <label for="customer-name">Full Name</label>
+              <input type="text" id="customer-name" name="customer-name" placeholder="Enter your full name" required />
+            </div>
+            <div class="input-group">
+              <label for="customer-email">Email</label>
+              <input type="email" id="customer-email" name="customer-email" placeholder="Enter your email" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="input-group">
+              <label for="customer-phone">Phone</label>
+              <input type="tel" id="customer-phone" name="customer-phone" placeholder="Enter your phone number" required />
+            </div>
+            <div class="input-group">
+              <label for="customer-license">Driver's License</label>
+              <input type="text" id="customer-license" name="customer-license" placeholder="Enter your license number" required />
+            </div>
+          </div>
+        </div>
+        
+        <div class="customer-additional-info">
+          <h3>Additional Information</h3>
+          <div class="form-row">
+            <div class="input-group">
+              <label for="customer-flight">Flight Number</label>
+              <input type="text" id="customer-flight" name="customer-flight" placeholder="Enter your flight number" />
+            </div>
+            <div class="input-group">
+              <label for="customer-hotel">Hotel / Accomodation</label>
+              <input type="text" id="customer-hotel" name="customer-hotel" placeholder="Enter your accomodation" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="input-group">
+              <label for="customer-country">Country</label>
+              <input type="text" id="customer-country" name="customer-country" placeholder="Enter your country" />
+            </div>
+          </div>
+        </div>
+        
+        <p>CDW 10% deductible | Legal Asistence LAS | Medical insurance PAI | Unlimited miliage | Local & federal taxes | Liability ALI</p>
+        
+        <button type="submit" class="confirm-booking-btn">Confirm Booking</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Booking Confirmation Modal -->
+  <div id="confirmation-modal" class="modal">
+    <div class="modal-content confirmation">
+      <span class="close-confirmation">&times;</span>
+      <div class="confirmation-content">
+        <i class="fas fa-check-circle confirmation-icon"></i>
+        <h2>Booking Confirmed!</h2>
+        <p>Thank you for your reservation. A confirmation email has been sent to your inbox.</p>
+        <div class="reference-number">
+          <span>Booking Reference:</span>
+          <strong id="booking-reference"></strong>
+        </div>
+        <p class="confirmation-note">Our team will contact you within 24 hours to confirm your booking details.</p>
+        <button class="ok-btn" onclick="closeConfirmation()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Us -->
+  <section id="about" class="about-us">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>About Heaven Star Car Rental</h2>
+          <p>
+            Looking for a rental car company that won't break the bank? Look no further than Heaven Star Rent a Car! We offer affordable rates on a wide variety of rental cars, so you can find the perfect vehicle for your needs without breaking the bank. Plus, our friendly and knowledgeable staff is always available to answer any questions you may have about your rental.</p>
+
+          <p>We distinguish ourselves from the competition with our affordable prices, fast and safe service.</p>
+          
+          <div class="about-details">
+            <div class="detail-item">
+              <i class="fas fa-heart"></i>
+              <div>
+                <h4>INTEGRITY</h4>
+                <p>We fulfill all the commitments we have with our customers, employees and shareholders.</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h4>24X7 SERVICE</h4>
+                <p>Complete control on each & every element that provides endless customization.</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-car"></i>
+              <div>
+                <h4>WELL MAINTAINED CARS</h4>
+                <p>All of our rental vehicles are well maintained and definitely clean.</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-phone-alt"></i>
+              <div>
+                <h4>Phone</h4>
+                <p>+52 998 464 9833</p>
+                <p>+52 998 149 9841</p>
+                <small>8:00 AM - 9:00 PM daily | We are closed on Sundays.</small>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p>reservations@heavenstar.com</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Main Office</h4>
+                <p>Carr. Cancún - Tulum km 307, 77567 Cancún, Q.R.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-map">
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.6617892437366!2d-86.84971689999999!3d21.0462145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e8197bc822ec7%3A0x10bcfbe51c21efe1!2sHeaven%20Star%20Car%20Rental%20%7C%20Renta%20de%20autos%20Aeropuerto%20Canc%C3%BAn!5e0!3m2!1ses-419!2smx!4v1757212585563!5m2!1ses-419!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="logo">
+            <img src="https://i.ibb.co/B5yCyTcv/heavenstar-logo-white.png" alt="Heaven Star Car Rental Logo" />
+            <span>Heaven Star Car Rental</span>
+          </div>
+          <p>Your best option for reliable and affordable car rentals. Experience excellence in mobility.</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100070243123159" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/heaven_rentalcar/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/CarrentalHeaven" target="_blank"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#cars">Our Fleet</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="luxury-car-rental.html">Luxury Car Rental</a></li>
+            <li><a href="corporate-rentals.html">Corporate Rentals</a></li>
+            <li><a href="event-transportation.html">Event Transportation</a></li>
+            <li><a href="airport-transfers.html">Airport Transfers</a></li>
+            <li><a href="long-term-leasing.html">Long Term Leasing</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><i class="fas fa-phone"></i> +52 998 464 9833</li>
+            <li><i class="fas fa-phone"></i> +52 998 149 9841</li>
+            <li><i class="fas fa-envelope"></i> reservations@heavenstar.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> Carretera Cancún - Chetumal 77567 Cancún, Q. Roo, México.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Heaven Star Car Rental. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
