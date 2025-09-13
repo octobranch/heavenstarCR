@@ -17,6 +17,8 @@
     --transition: all 0.3s ease;
     --border-radius: 12px;
     --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #F9E076 100%);
+    --gold-gradient-hover: linear-gradient(135deg, #c19b2e 0%, #e6cf6d 100%);
 }
 
 body {
@@ -216,20 +218,26 @@ nav {
     line-height: 1.6;
 }
 
+/* BOTÓN EXPLORE OUR FLEET MEJORADO */
 .cta-button {
     display: inline-flex;
     align-items: center;
-    background-color: var(--primary-color);
+    justify-content: center;
+    background: var(--gold-gradient);
     color: var(--dark-color);
-    padding: 18px 35px;
+    padding: 20px 40px;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.1rem;
     transition: var(--transition);
-    box-shadow: var(--shadow);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
     position: relative;
     overflow: hidden;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
 }
 
 .cta-button::before {
@@ -239,14 +247,14 @@ nav {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
     transition: 0.5s;
 }
 
 .cta-button:hover {
-    background-color: #c19b2e;
-    transform: translateY(-5px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    background: var(--gold-gradient-hover);
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4);
 }
 
 .cta-button:hover::before {
@@ -254,18 +262,19 @@ nav {
 }
 
 .cta-button i {
-    margin-left: 10px;
+    margin-left: 12px;
     transition: var(--transition);
+    font-size: 1.2rem;
 }
 
 .cta-button:hover i {
     transform: translateX(8px);
 }
 
-/*  BOOKING FORM */
+/*  BOOKING FORM - MEJORADO SIGNIFICATIVAMENTE */
 .book-now-container {
     position: absolute;
-    bottom: -70px;
+    bottom: -80px;
     left: 0;
     right: 0;
     z-index: 100;
@@ -273,21 +282,24 @@ nav {
 
 .book-now-bar {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr) 180px;
     gap: 20px;
-    padding: 35px;
+    padding: 35px 40px;
     background-color: var(--light-color);
     border-radius: var(--border-radius);
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    box-shadow: var(--card-shadow);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
 }
 
 .input-group {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .input-group label {
@@ -308,21 +320,28 @@ nav {
 }
 
 .input-group input, .input-group select {
-    padding: 16px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
+    padding: 16px 20px;
+    border: 2px solid #eaeaea;
+    border-radius: 10px;
     width: 100%;
     font-size: 1rem;
     box-sizing: border-box;
     transition: var(--transition);
     background: #fff;
     font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    height: 55px;
 }
 
 .input-group input:focus, .input-group select:focus {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+    transform: translateY(-2px);
+}
+
+.input-group input::placeholder {
+    color: #a0a0a0;
 }
 
 .card-dropdown {
@@ -341,28 +360,41 @@ nav {
     padding-right: 45px;
 }
 
+/* BOTÓN DE BÚSQUEDA MEJORADO */
 .search-btn {
     font-family: 'Montserrat', sans-serif;  
-    background: var(--primary-color);
+    background: var(--gold-gradient);
     color: var(--dark-color);
     font-size: 1.05rem;
-    font-weight: 600;
-    padding: 18px 30px;
+    font-weight: 700;
+    padding: 18px 25px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     transition: var(--transition);
     align-self: flex-end;
-    box-shadow: var(--shadow);
-    grid-column: 1 / -1;
-    margin-top: 10px;
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
     letter-spacing: 0.5px;
+    text-transform: uppercase;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 .search-btn:hover {
-    background: #c19b2e;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: var(--gold-gradient-hover);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(212, 175, 55, 0.4);
+}
+
+.search-btn i {
+    transition: var(--transition);
+}
+
+.search-btn:hover i {
+    transform: translateX(4px);
 }
 
 /*  SERVICES SECTION  */
@@ -1504,6 +1536,14 @@ footer::before {
 
 /*  RESPONSIVE DESIGN  */
 @media screen and (max-width: 1024px) {
+    .book-now-bar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .search-btn {
+        grid-column: 1 / -1;
+    }
+    
     .modal-grid {
         grid-template-columns: 1fr;
     }
@@ -1563,9 +1603,9 @@ footer::before {
     }
     
     .book-now-bar {
-        flex-direction: column;
-        align-items: stretch;
+        grid-template-columns: 1fr;
         padding: 25px;
+        bottom: -100px;
     }
     
     .search-btn {
@@ -1623,7 +1663,7 @@ footer::before {
     
     .book-now-bar {
         padding: 20px;
-        bottom: -90px;
+        bottom: -110px;
     }
     
     .modal-content {
