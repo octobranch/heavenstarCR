@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,8 +17,6 @@
   <a aria-label="English version" href="index.html">EN</a>
   <a aria-label="Versión en Español" href="index.es.html">ES</a>
 </div>
-</head>
-<body>
   <!-- Header & Navigation -->
   <header>
     <div class="header-container">
@@ -136,7 +134,7 @@
         <div class="vehicle-card" data-price="41.00" data-category="economic"
              data-specs='{"speed":"189 km/h","acceleration":"0-100 km/h in 11.3 s","engine":"1.6 L I4 (115 HP)","transmission":"5-speed Manual","fuelEconomy":"6.6 L/100 km (avg)","features":"Front-wheel drive, Air-conditioning, Power steering, Alloy wheels (depending on trim)"}'>
           <div class="vehicle-image">
-            <img src="https://i.ibb.co/zV3V9KM0/economic.png" alt="Economic" />
+            <img src="https://i.ibb.co/zV3V9KM0/economic.png" alt="Economic rental car example - Chevrolet Aveo or similar" />
             <div class="vehicle-overlay">
               <button class="quick-view-btn">Quick View</button>
             </div>
@@ -305,8 +303,7 @@
   </section>
 
  <!-- Testimonial section -->
-  <section class="testimonials">
-   <section id="testimonials" class="container">
+   <section id="testimonials" class="testimonials container">
     <div class="container">
       <div class="section-header">
     <h2>Voices of Trust – Our Clients Speak</h2>
@@ -467,13 +464,6 @@
     }
   });
 </script>
-            </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Vehicle Details Modal -->
   <div id="modal" class="modal">
@@ -547,7 +537,7 @@
       <span class="close-booking">&times;</span>
       <h2>Complete Your Booking</h2>
       
-      <form name="booking" method="POST" netlify>
+<form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="booking" />
         
         <div class="booking-details">
